@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-19-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="slds-is-relative container" style={maxWidth}>
+        <template for:each={slidesData} for:item="slide">
+            <a href={slide.link} key={slide.index} class={slide.slideClass} onmouseover={handleMouseOver}
+                onmouseout={handleMouseOut}>
+                <img src={slide.image} alt={slide.description} style={maxHeight} />
+                <div if:false={hideSlideText} class="text-section slds-p-around_medium">
+                    <h3 class="slds-text-heading_large">{slide.heading}</h3>
+                    <div class="slds-text-heading_small">{slide.description}</div>
+                </div>
+            </a>
+        </template>
+        <a if:false={hideNavigationButtons} class="prev" onclick={slideBackward}>&#10094;</a>
+        <a if:false={hideNavigationButtons} class="next" onclick={slideForward}>&#10095;</a>
+    </div>
+    <div if:false={hideNavigationDots} class="slds-text-align_center slds-p-around_medium">
+        <template for:each={slidesData} for:item="slide">
+            <span key={slide.index} class={slide.dotClass} data-id={slide.index} onclick={showSlide}></span>
+        </template>
+    </div>
+</template>

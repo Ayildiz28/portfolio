@@ -1,0 +1,76 @@
+.container {
+    margin: auto;
+  }
+  .text-section {
+    position: absolute;
+    color: #F2F2F2;
+    font-size: 15px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  a {
+    text-decoration: none;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .slideNumbers {
+    font-size: 12px;
+    position: absolute;
+    padding: 8px 12px;
+    top: 0;
+    color: #F2F2F2;
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #bbb;
+    margin: 0 2px;
+    display: inline-block;
+  }
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes autoplay3 {
+    0% {margin-top: 10em}
+    4% {margin-top: 0em}
+    31% {margin-top: 0em}
+    35% {margin-top: -10em}
+    64% {margin-top: -10em}
+    68% {margin-top: -20em}
+    96% {margin-top: -20em}
+    100% {margin-top: -30em}
+  }
